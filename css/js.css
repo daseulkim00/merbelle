@@ -1,0 +1,34 @@
+.bx-controls-direction {
+    display: none;
+}
+
+.bx-pager {
+
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bx-pager>div {
+    float: left;
+}
+
+.bx-pager .bx-pager-item {
+    font-size: 0;
+    padding: 10px 5px;
+}
+
+.bx-pager .bx-pager-item a {
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 13px;
+}
+
+.bx-pager .bx-pager-item a:focus {
+    width: 50px;
+    background-color: #222;
+    opacity: 0.5;
+}

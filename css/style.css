@@ -1,0 +1,649 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap');
+
+.wrap {
+    width: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+body {
+    color: #222;
+    font-family: 'Source Serif Pro', serif;
+}
+
+/* ------aside------- */
+aside {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    z-index: 1000;
+    text-align: right;
+    display: none;
+}
+aside.show{
+    display: block;
+}
+
+aside div {
+    position: absolute;
+    right: 0;
+}
+
+aside div a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    width: 165px;
+    height: 40px;
+    background-color: #02254c;
+    color: #fff;
+    font-size: 20px;
+}
+
+aside li a {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    padding-right: 25px;
+}
+
+aside li a span {
+    opacity: 0;
+}
+
+aside li.on a span {
+    opacity: 1;
+    color: #02254c;
+}
+
+aside li a:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border: 3px solid #02254c;
+    border-radius: 50%;
+}
+
+aside li.on a:after {
+    background-color: #02254c;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+}
+
+aside li a:hover span {
+    opacity: 1;
+    color: #02254c;
+}
+
+aside li a:hover:after {
+    background-color: #02254c;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ----nav---- */
+nav {
+    letter-spacing: -2px;
+    position: absolute;
+    height: 125px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.795);
+    line-height: 125px;
+    z-index: 10;
+}
+
+nav h1 {
+    float: left;
+}
+
+nav ul {
+    float: right;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    padding: 10px 25px;
+}
+
+/* -----sec0---- */
+
+.sec0 {
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.sec0>div {
+    position: absolute;
+}
+
+.sec0 h3 {
+    font-size: 65px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: 80px;
+    padding-bottom: 15px;
+}
+
+.sec0 p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 28px;
+    line-height: 50px;
+}
+
+.sec0 .slide_1,
+.slide_2,
+.slide_3 {
+    position: relative;
+}
+
+.sec0>div>.bg {
+    width: 655px;
+    height: 815px;
+    background: rgba(34, 34, 34, 0.555);
+    position: absolute;
+}
+
+.sec0 .slide_1 .bg {
+    bottom: 0;
+    left: 0;
+}
+
+.sec0 .slide_2 .bg,
+.sec0 .slide_3 .bg {
+    bottom: 0;
+    right: 0;
+}
+
+.sec0 .slide_1 .text {
+    position: absolute;
+    top: 49%;
+    left: 4%;
+    z-index: 10;
+}
+
+.sec0 .slide_1 p {
+    font-size: 28px;
+    letter-spacing: -2px;
+    font-weight: 400;
+}
+
+.sec0 .slide_2 .text,
+.slide_3 .text {
+    position: absolute;
+    top: 49%;
+    right: 6%;
+    z-index: 10;
+}
+
+/* --------------sec1----------------- */
+
+.sec1 {
+    position: relative;
+    height: 100vh;
+}
+
+.sec1 img {
+    height: 100%;
+}
+
+.sec1 .text {
+    position: absolute;
+    right: -100%;
+    letter-spacing: -2px;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.text.show {
+    opacity: 1;
+    right: 10%;
+    top: 17%;
+}
+
+.sec1 .text h4 {
+    font-size: 23px;
+    padding-bottom: 35px;
+    font-weight: 400;
+    color: #666;
+}
+
+.sec1 .text h2 {
+    font-size: 80px;
+    padding-bottom: 80px;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.sec1 .text p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 60px;
+    padding-top: 20px;
+    padding-left: 8px;
+}
+
+.sec1 .text .line1 {
+    border: 0.5px solid #777;
+    width: 270px;
+    position: absolute;
+    top: 11%;
+    right: 0;
+}
+
+.sec1 .text .line2 {
+    border: 0.5px solid #777;
+    width: 585px;
+    position: absolute;
+    bottom: -21%;
+    right: 0;
+}
+
+/* ----------------sec2---------------- */
+.sec2 {
+    position: relative;
+    text-align: center;
+    letter-spacing: -1px;
+    position: relative;
+    height: 100vh;
+}
+
+.sec2 .main_bg>div {
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.sec2 .main_bg>div.active {
+    opacity: 1;
+}
+
+.sec2 .main_bg>div>img {
+    height: 100%;
+}
+
+.sec2 .art_1 .inner div {
+    width: 335px;
+    height: 685px;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.sec2 .art_1 .inner div.active {
+    opacity: 0.5;
+}
+
+.sec2 .art_1 .inner .bg1 {
+    left: 20%;
+}
+
+.sec2 .art_1 .inner .bg2 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec2 .art_1 .bg3 {
+    width: 355px;
+    height: 685px;
+    background-color: #fff;
+    opacity: 0.5;
+    position: absolute;
+    top: 7%;
+    right: 20%;
+}
+
+.sec2 h2 {
+    position: absolute;
+    top: 105px;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.sec2 .text {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+
+.sec2 .text>div {
+    float: left;
+    width: 335px;
+    text-align: center;
+}
+
+.sec2 .text h3 {
+    font-size: 35px;
+    font-weight: 400;
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
+
+.sec2 .text p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 23px;
+    line-height: 40px;
+}
+
+.sec2 .text hr {
+    border: 1px solid #222;
+    width: 250px;
+    position: absolute;
+}
+
+.sec2 .text_1 hr {
+    top: 25%;
+    left: 4%;
+}
+
+.sec2 .text_2 hr {
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec2 .text_3 hr {
+    top: 25%;
+    right: 3.5%;
+}
+
+.sec2 .text_2 {
+    margin: 0 65px;
+}
+
+/* -------sec3-------- */
+.sec3 {
+    position: relative;
+    height: 100vh;
+}
+
+.sec3 h2 {
+    position: absolute;
+    top: 115px;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.sec3 article {
+    display: flex;
+    text-align: center;
+    padding-top: 260px;
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100%;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.sec3 article.show {
+    opacity: 1;
+    bottom: 15%;
+}
+
+.sec3 article>div:nth-child(2) {
+    margin: 0px 90px;
+}
+
+.sec3 article .text h3 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    padding: 45px 0px 20px 0px;
+}
+
+.sec3 article .text hr {
+    border: 1px solid #777;
+    width: 164px;
+    margin-left: 81px;
+}
+
+.sec3 article .text p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 35px;
+    padding: 25px 0px;
+}
+/* -------sec4------ */
+.sec4 {
+    height: 100vh;
+    position: relative;
+}
+
+.sec4 .left {
+    float: left;
+}
+
+.sec4 .left>div {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.sec4 .right {
+    float: right;
+}
+
+.sec4 .right>div {
+    width: 715px;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.sec4 .left>div.active {
+    opacity: 1;
+    transition: 2s;
+}
+
+.sec4 .right>div.active {
+    opacity: 1;
+    transition: 2s;
+}
+
+.sec4 .text {
+    position: absolute;
+    right: 21%;
+    top: 12%;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.sec4 .text h2 {
+    font-weight: 400;
+    font-size: 70px;
+    padding-bottom: 100px;
+    letter-spacing: -3px;
+}
+
+.sec4 .text h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.sec4 .text p {
+    font-size: 20px;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.sec4 .text hr {
+    position: absolute;
+    left: -75%;
+    width: 450px;
+    border: 1px solid #fff;
+    opacity: 0;
+}
+
+.sec4 .text hr.active {
+    opacity: 1;
+    left: -93%;
+    transition: 1s;
+}
+
+.sec4 .text .room_1 hr {
+    top: 24%;
+}
+
+.sec4 .text .room_2 hr {
+    top: 34.5%;
+}
+
+.sec4 .text .room_3 hr {
+    top: 45%;
+}
+
+.sec4 .text .room_4 hr {
+    top: 55.5%;
+}
+
+.sec4 .text .room_5 hr {
+    top: 66%;
+}
+
+.sec4 .text .room_6 hr {
+    top: 76.5%;
+}
+
+.sec4 .text .room_7 hr {
+    top: 87%;
+}
+
+.sec4 .text .room_8 hr {
+    top: 97.5%;
+}
+
+/* ---------------sec5------------------ */
+.sec5 {
+    height: 100vh;
+    position: relative;
+}
+
+.sec5 h2 {
+    position: absolute;
+    top: 115px;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.sec5 .contact {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+}
+
+.sec5 .left {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    transition: 1s ease-out;
+    animation-delay: 0s;  
+}
+
+.sec5 .right {
+    height: 400px;
+    border-left: 1px solid #777;
+    margin-left: 100px;
+    position: absolute;
+    top: 0;
+    right: 33%;
+    opacity: 0;
+    transition: 1s ease-out;
+    animation-delay: 0s;  
+}
+
+.sec5 .left.show {
+    opacity: 1;
+    transform: translate(200px, 0);
+}
+
+.sec5 .right.show {
+    opacity: 1;
+    transform: translate(-33%,0);
+}
+
+.sec5 .right h3 {
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.sec5 .right p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.sec5 .right .call {
+    margin: 55px 0px 100px 30px;
+}
+
+.sec5 .right .location {
+    margin-left: 30px;
+}
+
+/* -------------footer--------------- */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #dddede;
+    text-align: center;
+}
+
+footer h1 {
+    float: left;
+    line-height: 200px;
+}
+
+footer p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -1px;
+}
+
